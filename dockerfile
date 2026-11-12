@@ -108,8 +108,8 @@ keepalive 10 60
 persist-key
 persist-tun
 
-#user nobody
-#group nogroup
+user nobody
+group nogroup
 
 data-ciphers AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305
 auth SHA256

@@ -39,14 +39,12 @@ LAN-сети не должны пересекаться друг с другом
 ```bash
 cat << 'EOF' > openvpn-data/ccd/site-a
 ifconfig-push 10.77.0.10 255.255.255.0
-route 10.10.1.0 255.255.255.0
 iroute 10.10.1.0 255.255.255.0
 push "route 10.10.2.0 255.255.255.0"
 EOF
 
 cat << 'EOF' > openvpn-data/ccd/site-b
 ifconfig-push 10.77.0.11 255.255.255.0
-route 10.10.2.0 255.255.255.0
 iroute 10.10.2.0 255.255.255.0
 push "route 10.10.1.0 255.255.255.0"
 EOF
