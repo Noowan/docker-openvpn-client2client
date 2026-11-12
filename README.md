@@ -37,14 +37,14 @@ openvpn-data/clients/site-b/site-b.ovpn
 LAN-сети не должны пересекаться друг с другом, VPN и Docker-сетью.
 
 ```bash
-cat &lt;&lt; 'EOF' &gt; openvpn-data/ccd/site-a
+cat << 'EOF' > openvpn-data/ccd/site-a
 ifconfig-push 10.77.0.10 255.255.255.0
 route 10.10.1.0 255.255.255.0
 iroute 10.10.1.0 255.255.255.0
 push "route 10.10.2.0 255.255.255.0"
 EOF
 
-cat &lt;&lt; 'EOF' &gt; openvpn-data/ccd/site-b
+cat << 'EOF' > openvpn-data/ccd/site-b
 ifconfig-push 10.77.0.11 255.255.255.0
 route 10.10.2.0 255.255.255.0
 iroute 10.10.2.0 255.255.255.0
